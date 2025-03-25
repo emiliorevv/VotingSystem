@@ -7,7 +7,7 @@ public class Usuario {
     @Id
     private long id;
     private String nombre;
-    private String password;
+    private String passsword;
     private String email;
     private Role rol;
 

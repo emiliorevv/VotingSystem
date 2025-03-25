@@ -2,10 +2,10 @@ package com.example.votingsystem.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-
-@SpringBootApplication
+@Entity
 public class Candidato {
 
+    @Id
     private long id;
     private String nombre;
     private String descripcion;
@@ -55,7 +55,10 @@ public class Candidato {
     }
 
 
-    public obtenerVotos(){
+    public long obtenerVotos(){
+
+        return "Los votos obtenidos fueron: " + this.votos;
+
         //cuenta los votos asociados
         //calcula porcentaje sobre total
         //devuelve estadisticas

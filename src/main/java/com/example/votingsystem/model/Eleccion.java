@@ -1,6 +1,8 @@
 package com.example.votingsystem.model;
 import java.persistence.Entity;
 import java.persistence.Id;
+import java.time.LocalDateTime;
+import java.util.Scanner;
 
 @Entity
 public class Eleccion {
@@ -75,7 +77,7 @@ public class Eleccion {
     }
 
 
-    public crearEleccion(){
+    public void crearEleccion(){
         //Valida datos(titulo, descripcion)
         //Verifica fechas (inicio posterior a creación)
         //Persiste la eleccion
