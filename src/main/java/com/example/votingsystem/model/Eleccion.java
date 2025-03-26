@@ -3,11 +3,14 @@ import java.persistence.Entity;
 import java.persistence.Id;
 import java.time.LocalDateTime;
 import java.util.Scanner;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Entity
 public class Eleccion {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String titulo;
     private String descripcion;

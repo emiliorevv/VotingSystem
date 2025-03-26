@@ -2,10 +2,13 @@ package com.example.votingsystem.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.time.LocalDateTime;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Entity
 public class Voto{
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private boolean voto;
     private LocalDateTime fechaVoto;

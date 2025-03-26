@@ -1,14 +1,18 @@
 package com.example.votingsystem.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
+import javax.persistence.EnumType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 @Entity
 public class Usuario {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String nombre;
     private String passsword;
     private String email;
+    @Enumerated(EnumType.STRING)
     private Role rol;
 
     public Usuario(){
