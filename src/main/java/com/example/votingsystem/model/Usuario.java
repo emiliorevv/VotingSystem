@@ -1,73 +1,73 @@
 package com.example.votingsystem.model;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.EnumType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 @Entity
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String nombre;
-    private String passsword;
+    private String password;
     private String email;
-    @Enumerated(EnumType.STRING)
-    private Role rol;
+    //@Enumerated(EnumType.STRING)
+    private Role role;
 
-    public Usuario(){
+    public Usuario() {
 
     }
 
-    public Usuario(long id, String nombre, String password, String email, Role rol){
+    public Usuario(long id, String nombre, String password, String email, Role role) {
         this.id = id;
         this.nombre = nombre;
         this.password = password;
         this.email = email;
-        this.role = rol;
+        this.role = role;
     }
 
-    public void SetId(long id){
+    public void SetId(long id) {
         this.id = id;
     }
 
-    public long GetId(){
+    public long GetId() {
         return this.id;
     }
 
-    public void SetNombre(String nombre){
+    public void SetNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public String GetNombre(){
+    public String GetNombre() {
         return this.nombre;
     }
 
-    public void SetPassword(String password){
+    public void SetPassword(String password) {
         this.password = password;
     }
 
-    public String GetPassword(){
+    public String GetPassword() {
         return this.password;
     }
 
-    public void SetEmail(String email){
+    public void SetEmail(String email) {
         this.email = email;
     }
 
-    public String GetEmail(){
+    public String GetEmail() {
         return this.email;
     }
 
-    public void SetRole(Role rol){
-        this.role = rol;
+    public void SetRole(Role role) {
+        this.role = role;
     }
 
-    public Role GetRol(){
-        return this.rol;
+    public Role GetRole() {
+        return this.role;
     }
 
-    public registrarse(){
+    public void registrarse() {
         //valida datos de entrada (mail, contraseña)
         //verifica que el usuario no exista
         //codifica la contraseña
@@ -75,14 +75,15 @@ public class Usuario {
 
     }
 
-    public iniciarSesion(){
+    public void iniciarSesion() {
         //Verifica credenciales
         //Genera token/sesion
         //Registra tiempo de inicio
     }
 
-    public votar(){
+    public void votar() {
         //Verifica elegibilidad(que el usuario no haya elegido antes)
         //Registra voto
         //Confirma operacion
     }
+}

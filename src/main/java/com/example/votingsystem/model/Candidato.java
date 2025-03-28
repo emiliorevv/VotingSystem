@@ -1,8 +1,8 @@
 package com.example.votingsystem.model;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 @Entity
 public class Candidato {
@@ -58,9 +58,8 @@ public class Candidato {
     }
 
 
-    public long obtenerVotos(){
+    public void obtenerVotos(){
 
-        return "Los votos obtenidos fueron: " + this.votos;
 
         //cuenta los votos asociados
         //calcula porcentaje sobre total

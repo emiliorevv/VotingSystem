@@ -1,9 +1,9 @@
 package com.example.votingsystem.model;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import java.time.LocalDateTime;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 @Entity
 public class Voto{
@@ -32,11 +32,11 @@ public class Voto{
     }
 
 
-    public void SetVoto(long voto){
+    public void SetVoto(boolean voto){
         this.voto = voto;
     }
 
-    public long GetVoto(){
+    public boolean GetVoto(){
         return this.voto;
     }
 
@@ -50,8 +50,7 @@ public class Voto{
 
 
 
-    public void registrarVoto(boolean voto, LocalDateTime fechaVoto){
-        if (voto )
+    public void registrarVoto(){
         //Verifica que eleccion este activa
         //Comprueba que usuario no haya votado
         //Anonimiza si es necesario

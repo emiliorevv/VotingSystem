@@ -1,8 +1,8 @@
 package com.example.votingsystem.model;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 
 @Entity
@@ -39,7 +39,7 @@ public class Resultados {
     }
 
 
-    public calcularResultados(){
+    public void calcularResultados(){
         //Obtiene todos los votos de una eleccion
         //Agrupa por candidato
         //Calcula estadisticas

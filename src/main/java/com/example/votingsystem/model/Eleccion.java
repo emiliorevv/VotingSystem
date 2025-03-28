@@ -1,10 +1,10 @@
 package com.example.votingsystem.model;
-import java.persistence.Entity;
-import java.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import java.time.LocalDateTime;
 import java.util.Scanner;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 @Entity
 public class Eleccion {
@@ -86,22 +86,22 @@ public class Eleccion {
         //Persiste la eleccion
     }
 
-    public activarEleccion(){
+    public void  activarEleccion(){
         //Verifica si todos los requisitos están listos
         //Cambia estado a activo
         //Notifica si es necesario
     }
 
 
-    public finalizarEleccion(){
+    public void  finalizarEleccion(){
         //Verifica si la fecha fin ha llegado
         //Bloquea nuevos votos
         //Calcula resultados finales
 
     }
 
-    public obtenerResultados(){
-        //Cuenta votos por candidato
+    public void obtenerResultados(){
+        //C uenta votos por candidato
         //Calcula porcentajes
         //Estructura datos para visualización
 
